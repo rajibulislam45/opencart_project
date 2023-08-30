@@ -6,12 +6,14 @@
   </listeners>
   <test thread-count="5" name="openCartTest(failed)">
     <parameter name="browser" value="chrome"/>
-    <groups>
-      <run>
-        <include name="Master"/>
-      </run>
-    </groups>
     <classes>
+      <class name="testCases.TC_002_LoginTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="test_login"/>
+        </methods>
+      </class> <!-- testCases.TC_002_LoginTest -->
       <class name="testCases.TC_001_AccountRegistrationTest">
         <methods>
           <include name="test_account_Registration"/>
